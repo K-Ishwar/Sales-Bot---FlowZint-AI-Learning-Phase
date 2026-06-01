@@ -1,19 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import UploadScreen from "./components/UploadScreen";
+import ResultScreen from "./components/ResultScreen";
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-   <div className='box'>
-    <h2>Count:{count}</h2>
-    <button onClick={()=>setCount(count+1)}>Increment count</button>
+    const [uploaded, setUploaded] = useState(false);
 
-   </div>
-  )
+    return (
+        <>
+            {
+                uploaded
+                ? <ResultScreen />
+                : <UploadScreen
+                    onUpload={() => setUploaded(true)}
+                  />
+            }
+        </>
+    );
 }
 
-export default App
+export default App;
