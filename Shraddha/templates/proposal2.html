@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Proposal</title>
+</head>
+
+<body>
+
+<h1>Proposal for {{ client_name }}</h1>
+
+<p>Price: ₹{{ "{:,.0f}".format(price) }}</p>
+
+<h2>Requirements We Can Meet</h2>
+
+<ul>
+{% for item in can_meet %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+<h2>Requirements We Cannot Meet</h2>
+
+{% if cannot_meet %}
+
+<ul>
+{% for item in cannot_meet %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+{% else %}
+
+<p>All requirements met!</p>
+
+{% endif %}
+
+</body>
+</html>
