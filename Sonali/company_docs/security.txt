@@ -1,0 +1,3 @@
+file 2 security.txt
+We are SOC2 compliant.
+All customer data is encrypted.

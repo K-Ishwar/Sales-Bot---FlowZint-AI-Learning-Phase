@@ -1,0 +1,3 @@
+file 1 pricing.txt
+Our pricing starts at $99 per month.
+Enterprise plans are available.

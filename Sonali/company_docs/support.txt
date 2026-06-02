@@ -1,0 +1,4 @@
+file 3 support.txt
+Customer support is available 24/7.
+Premium customers receive priority support.
+Support tickets are answered within 2 hours.
