@@ -39,3 +39,10 @@ button:hover {
 p{
     color: gray;
 }
+
+#dragcontainer1, #dragcontainer2{
+    width: 200px;
+    background-color: gray;
+    border: 1px solid black;
+    height: 300px;
+}

@@ -3,14 +3,20 @@ import UploadScreen from "./components/UploadScreen";
 import ResultScreen from "./components/ResultScreen";
 import GithubUser from "./components/GithubUser";
 import PostDemo from "./components/PostDemo";
+import Spinner from "./components/Spinner";
 
 function App() {
 
-  // const [uploaded, setUploaded] = useState(false);
+  const [uploaded, setUploaded] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
     <>
-      <div
+      <UploadScreen/>
+      {
+        loading && <Spinner/>
+      }
+      {/* <div
         className="
             min-h-screen
             bg-purple-100
@@ -26,7 +32,7 @@ function App() {
 
         <PostDemo />
 
-      </div>
+      </div> */}
       {/* {
                 uploaded
                 ? <ResultScreen />

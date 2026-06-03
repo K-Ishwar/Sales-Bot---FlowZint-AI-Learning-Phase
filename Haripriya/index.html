@@ -23,6 +23,13 @@
         <button onclick="getUser()">Get user</button>
         <div id="result"></div>
     </div>
+
+    <div id="dragcontainer1" onDrop={drop(event)} onDragOver={allowDrop(event)}>
+            <img src="hero.png" alt="invalid image" draggable="true" onDragStart={drag(event)} id="dragItem" width="100px"/>
+        </div>
+        <div id="dragcontainer2" onDrop={drop(event)} onDragOver={allowDrop(event)}></div>
+
+
     <script src="script.js"></script>
 </body>
 
