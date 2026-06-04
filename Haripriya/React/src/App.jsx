@@ -1,19 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import UploadScreen from "./components/UploadScreen";
+import ResultScreen from "./components/ResultScreen";
+import GithubUser from "./components/GithubUser";
+import PostDemo from "./components/PostDemo";
+import Spinner from "./components/Spinner";
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [uploaded, setUploaded] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
-   <div className='box'>
-    <h2>Count:{count}</h2>
-    <button onClick={()=>setCount(count+1)}>Increment count</button>
+    <>
+      <UploadScreen/>
+      {
+        loading && <Spinner/>
+      }
+      {/* <div
+        className="
+            min-h-screen
+            bg-purple-100
+            flex
+            flex-col
+            items-center
+            justify-center
+            gap-8
+            "
+      >
 
-   </div>
-  )
+        <GithubUser />
+
+        <PostDemo />
+
+      </div> */}
+      {/* {
+                uploaded
+                ? <ResultScreen />
+                : <UploadScreen
+                    onUpload={() => setUploaded(true)}
+                  />
+            } */}
+    </>
+  );
 }
 
-export default App
+export default App;
