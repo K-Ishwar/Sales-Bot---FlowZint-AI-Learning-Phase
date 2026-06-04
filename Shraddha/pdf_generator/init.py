@@ -1,0 +1,1 @@
+from .generator import generate_proposal_pdf

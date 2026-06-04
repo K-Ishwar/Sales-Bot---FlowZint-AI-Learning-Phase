@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    background: #1e40af;
+    color: white;
+    padding: 15px;
+}
+
+.section {
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+.requirements {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #f3f4f6;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.price {
+    text-align: right;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Project Proposal</h1>
+</div>
+
+<div class="section">
+    <h3>Client Name</h3>
+    <p>{{ client_name }}</p>
+</div>
+
+<div class="section requirements">
+    <h3>Requirements</h3>
+    <p>{{ requirements }}</p>
+</div>
+
+<table>
+
+<tr>
+    <th>Service</th>
+    <th>Price</th>
+</tr>
+
+<tr>
+    <td>{{ service }}</td>
+    <td class="price">{{ price }}</td>
+</tr>
+
+</table>
+
+</body>
+</html>
