@@ -4,6 +4,8 @@ function Spinner({ message = "Loading..." }) {
 
         <div
             className="
+            min-h-screen
+            bg-purple-100
             flex
             flex-col
             items-center
@@ -41,20 +43,29 @@ function Spinner({ message = "Loading..." }) {
 
             </div>
 
-            <p
+            <h2
                 className="
-                text-lg
-                font-medium
+                text-2xl
+                font-bold
                 text-purple-700
-                animate-pulse
                 "
             >
                 {message}
+            </h2>
+
+            <p
+                className="
+                text-gray-500
+                animate-pulse
+                "
+            >
+                Please wait...
             </p>
 
         </div>
 
     );
+
 }
 
 export default Spinner;
