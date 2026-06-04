@@ -32,7 +32,7 @@ Team`;
             clientName: "ABC Corp",
             industry: "Information Technology",
             budget: "$100,000",
-            deadline: "30 Days"
+            deadline: "45 Days"
         });
 
         setLoading(false);
