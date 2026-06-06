@@ -1,1 +1,1 @@
-from .analyzer import analyze_rfp
+from .query_engine import analyze_rfp
